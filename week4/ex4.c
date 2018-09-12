@@ -9,12 +9,10 @@ int main() {
 	while (1) {
 		char command[MAX_COMMAND_LEN];
 		char bckcommand[MAX_COMMAND_LEN + 1];
-		printf("--->  ");
 		gets(command);
 		strcpy(bckcommand, command);
 		bckcommand[strlen(command)] = ' ';
 		bckcommand[strlen(command)+1] = '&';
-		fork();
 		system(bckcommand);
 	}
 	return 0;
