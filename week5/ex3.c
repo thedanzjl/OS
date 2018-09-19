@@ -21,7 +21,7 @@ void producer() {
 		buffer[N] = 1;
 		N++;
 		consumerSleep = false;
-		printf("\nproducer writes 1!\n");
+		// printf("\nproducer writes 1!\n");
 	}
 }
 
@@ -36,20 +36,25 @@ void consumer() {
 		buffer[N] = -1;
 		N--;
 		producerSleep = false;
-		printf("\nconsumer pops 1 and sets -1!\n");
+		// printf("\nconsumer pops 1 and sets -1!\n");
 	}
 }
 
+int race1, race2;
 
 int main() {
 	while (1) {
 		pthread_t producerThread, consumerThread;
-		pthread_create(&producerThread, NULL, producer, NULL);
-		pthread_create(&consumerThread, NULL, consumer, NULL);
+		race1 = pthread_create(&producerThread, NULL, producer, NULL);
+		race2 = pthread_create(&consumerThread, NULL, consumer, NULL);
+		printf("race1=%d, race2=%d\n", race1, race2);
+		if (race1 != 0 || race2 != 0) { 
+			printf("fatal race condition occured!!\n");
+			return 0;
+		}
 		for (int i=0; i<BUFFER_SIZE; i++) {
 			printf("%d", buffer[i]);
 		}
-		// sleep(1);
 	}
 	return 0;
 }
