@@ -1,0 +1,5 @@
+8kb = 8 * 1024 bytes = 2^13 bytes
+
+for a single-level linear page table number on entries = number of addressable bytes / bytes in one page
+	
+	entries = 2^16 / 2^13 = 2^3 = 8 (Answer)

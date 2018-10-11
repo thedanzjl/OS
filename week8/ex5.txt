@@ -1,0 +1,5 @@
+
+
+Physical address is a real address, that is address which is exist in a computer and can be directly accessed.
+
+Vitrual address is an "imaginary" address, every application has its own virtual addresses. First, program goes to page table and then finds corresponding physical address.
