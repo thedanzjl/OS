@@ -1,0 +1,2 @@
+8605463811 /Users/danilginzburg/OS_course/OS_git/week1/file.txt
+./_ex2.txt

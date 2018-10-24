@@ -1,0 +1,8 @@
+-rw-r--r--  1 danilginzburg  staff  0 Oct 24 13:11 _ex3.txt
+-rwxr--rwx  1 danilginzburg  staff  0 Oct 24 13:11 _ex3.txt
+-rwxrwxrwx  1 danilginzburg  staff  0 Oct 24 13:11 _ex3.txt
+
+r=4, w=2, x=1
+-) 660 means rw for owner, rw for groups, no perm. for others
+-) 775 means rwx for owner, rwx for groups, rx for others
+-) 777 means rwx for owner, rwx for groups, rwx for others
