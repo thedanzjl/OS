@@ -1,0 +1,5 @@
+
+printf() uses line-buffered stdout. So it prints to output when it sees '/n' character.
+
+*) In the first case(without /n), "Hello" is put into buffer and since there are no '/n' it stays in buffer. After a fork buffer is copied to the child process (Hello becomes HelloHello). And that's the result.
+*) In the second case(with /n), "Hello/n" is put into buffer and "Hello" is printed to the terminal. Buffer is emptied and new process is created. New process writes just "/n" to the terminal and exists. 
