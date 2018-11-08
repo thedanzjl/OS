@@ -1,0 +1,22 @@
+NORMAL SIZE
+./copy ex1.txt file.txt  0,00s user 0,00s system 86% cpu 0,003 total
+
+SIZE 50
+./copy ex1.txt file.txt  0,00s user 0,00s system 80% cpu 0,002 total
+
+SIZE 150
+./copy ex1.txt file.txt  0,00s user 0,00s system 84% cpu 0,003 total
+
+
+- With modification 
+
+NORMAL SIZE
+./copy ex1.txt file.txt  0,00s user 0,00s system 83% cpu 0,003 total
+
+SIZE 50
+./copy ex1.txt file.txt  0,00s user 0,00s system 83% cpu 0,002 total
+
+SIZE 150
+./copy ex1.txt file.txt  0,00s user 0,00s system 84% cpu 0,003 total
+
+It works a bit better without modification for small buffer. 
